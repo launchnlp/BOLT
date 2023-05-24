@@ -18,7 +18,7 @@ import time
 
 from keywords_model_with_biases import GPTPromptTuningWithbiasesModelLM
 
-prompt_file = "/data/xin/prompts_from_PPLM/prompts_15.txt"
+prompt_file = "./keywords/prompts_15.txt"
 
 keywords_dict = {
     "computer" : ["router", "Linux", "keyboard", "server"],
@@ -29,7 +29,6 @@ keywords_dict = {
     "science" : ["microscope", "mass", "mineral", "scientist"],
     "space" : ["meteor", "planet", "satellite", "astronaut"],
 }
-
 
 seq_len = int(sys.argv[1])
 topic = sys.argv[2]
