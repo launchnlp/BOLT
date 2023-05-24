@@ -65,7 +65,7 @@ class GPTPromptTuningWithbiasesModelMixin:
         elif attribute == 'non_toxic':
             self.labels = torch.LongTensor([0]).cuda() # non-toxic
         else:
-            raise Exception("Invalid sentiment")
+            raise Exception("Invalid attribute")
         self.logits_processor = LogitsProcessorList(
             [
                 RepetitionPenaltyLogitsProcessor(penalty=1.2),
