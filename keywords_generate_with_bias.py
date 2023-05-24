@@ -1,4 +1,3 @@
-# %%
 from transformers import (
     GPT2TokenizerFast,
     AdamW,
