@@ -25,7 +25,7 @@ python detoxic_generate_with_bias.py $SEQLEN
 ```
 The generated sentences will be saved in `./detoxic/detoxic/`.
 
-# Keywords-based Topic Control
+# Keyword-guided Topic Control
 ```
 SEQLEN=20
 TOPIC=computer
