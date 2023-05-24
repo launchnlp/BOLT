@@ -29,6 +29,6 @@ The generated sentences will be saved in `./detoxic/detoxic/`.
 ```
 SEQLEN=20
 TOPIC=computer
-python keywords_generate_with_offset.py $SEQLEN $TOPIC
+python keywords_generate_with_bias.py $SEQLEN $TOPIC
 ```
 The generated sentences will be saved in `./keywords/keywords/`.
