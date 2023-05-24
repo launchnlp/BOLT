@@ -3,7 +3,9 @@ This is the implementation of ACL 2023 paper [BOLT: Fast Energy-based Controlled
 
 ## Environment Setup
 ```
-pip install -e ./transformers
+cd ./transformers
+pip install -e .
+cd -
 ```
 
 ## Download Discriminators
