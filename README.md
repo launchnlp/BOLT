@@ -1,5 +1,5 @@
 # Prompt Tuning
-This is the implementation of [BOLT: Fast Energy-based Controlled Text Generation with Tunable Biases](https://arxiv.org/abs/2305.12018).
+This is the implementation of ACL 2023 paper [BOLT: Fast Energy-based Controlled Text Generation with Tunable Biases](https://arxiv.org/abs/2305.12018).
 
 # Environment Setup
 ```
