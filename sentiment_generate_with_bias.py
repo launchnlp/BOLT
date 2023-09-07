@@ -39,7 +39,7 @@ args = Config()
 batch_size = 20
 
 tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
-# Initialize GPT2LM with soft prompt
+
 model = GPTPromptTuningWithbiasesModelLM.from_pretrained(
     "gpt2-large",
     n_tokens=args.n_prompt_tokens,
@@ -68,7 +68,7 @@ with open(prompt_file, "r") as f, open(output_file, "w") as g:
         ]
         optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
         model.eval()
-        minimun_loss = [100000] * batch_size
+        minimum_loss = [100000] * batch_size
         stored_sentence = [""] * batch_size
         start_time = time.time()
         for i in range(8):
@@ -90,13 +90,13 @@ with open(prompt_file, "r") as f, open(output_file, "w") as g:
                 print(f"loss: {loss}")
                 for idx in range(batch_size):
                     print(f"loss {idx}: senti loss: {senti_losses[idx]}")
-                    if senti_losses[idx] < minimun_loss[idx]:
-                        print(f"update minimun loss{idx}")
-                        minimun_loss[idx] = senti_losses[idx]
+                    if senti_losses[idx] < minimum_loss[idx]:
+                        print(f"update minimum loss{idx}")
+                        minimum_loss[idx] = senti_losses[idx]
                         stored_sentence[idx] = sentences[idx]
         
         end_time = time.time()
-        print("minimun loss: ", minimun_loss)
+        print("minimum loss: ", minimum_loss)
         print("stored sentence: ", stored_sentence)
         print("time: ", end_time - start_time)
         g.write('\n'.join(stored_sentence) + "\n\n")
